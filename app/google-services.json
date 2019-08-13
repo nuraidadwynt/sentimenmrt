@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "490676746298",
+    "firebase_url": "https://sentimenmrt.firebaseio.com",
+    "project_id": "sentimenmrt",
+    "storage_bucket": "sentimenmrt.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:490676746298:android:c70ce6970f7d703f",
+        "android_client_info": {
+          "package_name": "com.example.sentimenmrt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "490676746298-qm0geaf71681m516brpm9pjuvp5jhg3b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.sentimenmrt",
+            "certificate_hash": "13ddaf72f2b60f2dea7861b4327421eb349d3052"
+          }
+        },
+        {
+          "client_id": "490676746298-u5dhtoun3s3i4p7v2pvevqgn1f1tkinr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDeA87S2leLStvEaLq2MyGOcgpCUxsPIx8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "490676746298-u5dhtoun3s3i4p7v2pvevqgn1f1tkinr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
