@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:id="@+id/parentLayout"
+    >
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:id="@+id/image"
+        android:src="@drawable/haha"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/@c3budiman"
+        android:id="@+id/imagename"
+        android:layout_toRightOf="@id/image"
+        android:textColor="@color/biru"
+        android:layout_marginLeft="10dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mrt Jakarta Bersih Juga Yaa..."
+        android:id="@+id/tweets"
+        android:layout_toRightOf="@id/image"
+        android:textColor="@color/hitam"
+        android:layout_below="@id/imagename"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sentimen : "
+        android:id="@+id/sentimen"
+        android:layout_toRightOf="@id/image"
+        android:textColor="@color/tosca"
+        android:layout_below="@id/tweets"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Positif"
+        android:id="@+id/sentimen_nya"
+        android:layout_below="@id/tweets"
+        android:layout_toRightOf="@id/sentimen"
+        android:textColor="@color/tosca"
+        android:textSize="12sp"
+        android:layout_marginTop="5dp"
+        android:textStyle="bold"
+        />
+
+</RelativeLayout>
