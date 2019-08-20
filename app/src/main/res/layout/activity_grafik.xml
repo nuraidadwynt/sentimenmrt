@@ -4,14 +4,21 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:background="@color/colorAccent"
     tools:context=".grafik">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-
-        android:text="tab bar"/>
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:background="#204c9d"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:id="@+id/judulbar1"
+        android:text="BAR CHART AKUMULASI"/>
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/barchart"

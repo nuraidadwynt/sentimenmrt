@@ -5,12 +5,27 @@
     android:layout_width="match_parent"
     android:background="@color/colorAccent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".Table">
 
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:background="#204c9d"
+        android:padding="10dp"
+        android:textStyle="bold"
+        android:id="@+id/judultweet"
+        android:text="10 RECENT TWEETS"/>
     <androidx.recyclerview.widget.RecyclerView
         android:layout_width="match_parent"
+        android:layout_below="@+id/judultweet"
         android:layout_height="match_parent"
         android:id="@+id/recycler_view"
+
         ></androidx.recyclerview.widget.RecyclerView>
+
 
 </RelativeLayout>

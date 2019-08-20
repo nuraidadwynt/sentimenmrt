@@ -47,7 +47,7 @@ public class realtimechart extends AppCompatActivity {
                 negatif.add(new BarEntry(1, st.negative));
 
                 ArrayList netral = new ArrayList();
-                negatif.add(new BarEntry(2, st.netral));
+                netral.add(new BarEntry(2, st.netral));
 
                 BarDataSet dataSet = new BarDataSet(positif, "Positif ");
                 BarDataSet dataSet2 = new BarDataSet(negatif, "Negatif");
@@ -57,8 +57,11 @@ public class realtimechart extends AppCompatActivity {
 
                 chart.setData(data);
 
-                dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
-                dataSet.setColors(Color.GRAY);
+                //dataSet.setColors(ColorTemplate.COLORFUL_COLORS);
+                dataSet.setColors(Color.parseColor("#21a315"));
+                dataSet2.setColors(Color.RED);
+                dataSet3.setColors(Color.parseColor("#ffdc0c"));
+
                 dataSet2.setValueTextSize(20f);
                 dataSet2.setValueTextColor(Color.BLACK);
                 dataSet.setValueTextSize(20f);
