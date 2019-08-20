@@ -18,6 +18,18 @@
         android:textStyle="bold"
         android:id="@+id/judulbar1"
         android:text="BAR CHART REAL TIME"/>
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="15sp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:background="#204c9d"
+        android:paddingBottom="10dp"
+        android:textStyle="bold"
+        android:id="@+id/tanggal"
+        android:text=" Date : 20/08/2019"
+        />
 
     <com.github.mikephil.charting.charts.BarChart
         android:id="@+id/realtimechart"

@@ -25,9 +25,11 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
     private ArrayList<String> mImages = new ArrayList<>();
     private ArrayList<String> mTweets = new ArrayList<>();
     private ArrayList<String> mSentimen = new ArrayList<>();
+    private ArrayList<String> mTanggal = new ArrayList<>();
     private Context mContext;
 
-    public RecyclerViewAdapter(ArrayList<String> mImagesName, ArrayList<String> mImages, ArrayList<String> mTweets, ArrayList<String> mSentimen, Context mContext) {
+    public RecyclerViewAdapter(ArrayList<String> mTanggal,ArrayList<String> mImagesName, ArrayList<String> mImages, ArrayList<String> mTweets, ArrayList<String> mSentimen, Context mContext) {
+        this.mTanggal = mTanggal;
         this.mImagesName = mImagesName;
         this.mImages = mImages;
         this.mTweets = mTweets;
@@ -51,6 +53,8 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
         holder.imagename.setText(mImagesName.get(position));
         holder.tweets.setText(mTweets.get(position));
         holder.sentimennya.setText(mSentimen.get(position));
+        holder.tanggal.setText(mTanggal.get(position));
+
 
         holder.parentLayout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,7 +73,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
 
     public class viewHolder extends RecyclerView.ViewHolder{
         CircleImageView image;
-        TextView imagename, tweets, sentimennya;
+        TextView imagename, tweets, sentimennya, tanggal;
         RelativeLayout parentLayout;
 
         public viewHolder(@NonNull View itemView) {
@@ -79,6 +83,7 @@ public class RecyclerViewAdapter extends RecyclerView.Adapter<RecyclerViewAdapte
             tweets = itemView.findViewById(R.id.tweets);
             sentimennya = itemView.findViewById(R.id.sentimen_nya);
             parentLayout = itemView.findViewById(R.id.parentLayout);
+            tanggal = itemView.findViewById(R.id.tanggal);
         }
     }
 }

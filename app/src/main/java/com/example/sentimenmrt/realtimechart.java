@@ -3,6 +3,8 @@ package com.example.sentimenmrt;
 import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.widget.TextView;
+
 import com.github.mikephil.charting.charts.BarChart;
 import com.github.mikephil.charting.data.BarData;
 import com.github.mikephil.charting.data.BarDataSet;
@@ -13,7 +15,13 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+
+import org.w3c.dom.Text;
+
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
+import java.util.Locale;
 
 public class realtimechart extends AppCompatActivity {
     public static class Sentimen {
@@ -27,16 +35,23 @@ public class realtimechart extends AppCompatActivity {
     }
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+
         super.onCreate(savedInstanceState);
         final FirebaseDatabase database = FirebaseDatabase.getInstance();
         DatabaseReference ref = database.getReference("sentimen_realtime");
         ref.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
+                setContentView(R.layout.activity_realtimechart);
                 grafik.Sentimen st = dataSnapshot.getValue(grafik.Sentimen.class);
                 System.out.println(st.negative);
+                String date = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
 
-                setContentView(R.layout.activity_realtimechart);
+                TextView tanggal = findViewById(R.id.tanggal);
+                System.out.println(date);
+                System.out.println(tanggal);
+                tanggal.setText(date);
+
                 BarChart chart = findViewById(R.id.realtimechart);
                 chart.setHighlightFullBarEnabled(true);
 

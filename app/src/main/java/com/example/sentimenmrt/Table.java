@@ -25,6 +25,7 @@ public class Table extends AppCompatActivity {
     private ArrayList<String> mImageUrls = new ArrayList<>();
     private ArrayList<String> mTweetsnya = new ArrayList<>();
     private ArrayList<String> mSentimennya = new ArrayList<>();
+    private ArrayList<String> mtanggal = new ArrayList<>();
     RecyclerViewAdapter baseAdapter;
 
 
@@ -48,11 +49,13 @@ public class Table extends AppCompatActivity {
                     String user = ds.child("user").getValue(String.class);
                     String sentimen = ds.child("sentimen").getValue(String.class);
                     String original_text = ds.child("original_text").getValue(String.class);
+                    String tglnya = ds.child("created_at").getValue(String.class);
 
                     mImageUrls.add(ava);
                     mNames.add('@'+user);
                     mTweetsnya.add(original_text);
                     mSentimennya.add(sentimen);
+                    mtanggal.add(tglnya);
                     Log.d(TAG, "onDataChange: "+original_text);
                 }
                 //aneh anjir :
@@ -69,7 +72,7 @@ public class Table extends AppCompatActivity {
     private void initRecyclerView(){
         Log.d(TAG, "initRecyclerView: init recyclerview.");
         RecyclerView recyclerView = findViewById(R.id.recycler_view);
-        baseAdapter = new RecyclerViewAdapter(mNames,mImageUrls,mTweetsnya,mSentimennya,this);
+        baseAdapter = new RecyclerViewAdapter(mtanggal,mNames,mImageUrls,mTweetsnya,mSentimennya,this);
         recyclerView.setAdapter(baseAdapter);
         recyclerView.setLayoutManager(new LinearLayoutManager(this));
     }

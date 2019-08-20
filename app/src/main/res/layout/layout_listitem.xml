@@ -11,17 +11,35 @@
         android:id="@+id/image"
         android:src="@drawable/haha"
         />
-    <TextView
-        android:layout_width="wrap_content"
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="/@c3budiman"
-        android:id="@+id/imagename"
+        android:id="@+id/layoutatas"
         android:layout_toRightOf="@id/image"
-        android:textColor="@color/biru"
-        android:layout_marginLeft="10dp"
-        android:textSize="15sp"
-        android:textStyle="bold"
-        />
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/@c3budiman"
+            android:id="@+id/imagename"
+            android:textColor="@color/biru"
+            android:layout_marginLeft="10dp"
+            android:textSize="15sp"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="02/12/2019 20:14:00"
+            android:id="@+id/tanggal"
+            android:textColor="@color/biru"
+            android:layout_marginLeft="10dp"
+            android:textSize="10sp"
+            android:layout_alignParentRight="true"
+            />
+
+    </RelativeLayout>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -29,7 +47,7 @@
         android:id="@+id/tweets"
         android:layout_toRightOf="@id/image"
         android:textColor="@color/hitam"
-        android:layout_below="@id/imagename"
+        android:layout_below="@id/layoutatas"
         android:layout_marginLeft="10dp"
         android:textSize="12sp"
         />
