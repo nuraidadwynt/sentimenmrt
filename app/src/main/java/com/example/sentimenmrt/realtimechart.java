@@ -45,7 +45,7 @@ public class realtimechart extends AppCompatActivity {
                 setContentView(R.layout.activity_realtimechart);
                 grafik.Sentimen st = dataSnapshot.getValue(grafik.Sentimen.class);
                 System.out.println(st.negative);
-                String date = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault()).format(new Date());
+                String date = new SimpleDateFormat("EEEE dd/MM/yyyy", Locale.getDefault()).format(new Date());
 
                 TextView tanggal = findViewById(R.id.tanggal);
                 System.out.println(date);

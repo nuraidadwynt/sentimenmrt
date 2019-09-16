@@ -7,24 +7,29 @@
     android:orientation="vertical"
     android:layout_height="match_parent"
     tools:context=".realtimechart">
+
+
+
     <TextView
+        android:id="@+id/judulbar1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="20sp"
+        android:background="#6da1af"
+        android:padding="10dp"
+        android:fontFamily="@font/centurygotic"
+        android:text="BAR CHART REALTIME"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        android:background="#204c9d"
-        android:padding="10dp"
-        android:textStyle="bold"
-        android:id="@+id/judulbar1"
-        android:text="BAR CHART REAL TIME"/>
+        android:textSize="20sp"
+        android:textStyle="bold" />
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:textSize="15sp"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        android:background="#204c9d"
+        android:background="#6da1af"
+        android:fontFamily="@font/centurygotic"
         android:paddingBottom="10dp"
         android:textStyle="bold"
         android:id="@+id/tanggal"

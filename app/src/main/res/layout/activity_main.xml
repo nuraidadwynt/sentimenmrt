@@ -37,268 +37,80 @@
 
             </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:orientation="vertical"
+            tools:context=".MainActivity">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/logomrt"
+                    android:layout_width="60dp"
+                    android:layout_height="50dp"
+                    android:padding="5dp"
+                    android:src="@drawable/logomrtitem" />
+
+                <TextView
+                    android:id="@+id/judul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/logomrt"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginLeft="20dp"
+                    android:fontFamily="@font/strawberry"
+                    android:text="MRTweets"
+                    android:textColor="@color/colorAccent"
+                    android:textColorHint="@color/hitam"
+                    android:textSize="100sp"
+                     />
+
+                <TextView
+                    android:id="@+id/subbab1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/judul"
+                    android:fontFamily="@font/centurygotic"
+                    android:text="Analisa Sentimen MRT Jakarta"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/subbab1"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/centurygotic"
+                    android:gravity="center"
+                    android:text="Komentar Twitter Positif, negatif dan netral"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_gravity="center"
 
-                android:orientation="vertical"
-                tools:context=".MainActivity">
-
-
-
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="40dp"
-                        android:id="@+id/logomrt"
-                        android:src="@drawable/logomrt" />
-
-                    <TextView
-                        android:id="@+id/judul"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/logomrt"
-                        android:layout_centerHorizontal="true"
-                        android:layout_marginLeft="20dp"
-                        android:fontFamily="@font/brushmosh"
-                        android:text="MRTweets"
-                        android:textColor="#204c9d"
-                        android:textColorHint="@color/hitam"
-                        android:textSize="50sp"
-                        android:textStyle="bold" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_below="@+id/judul"
-                        android:layout_marginRight="10dp"
-                        android:paddingLeft="5dp"
-                        android:layout_marginLeft="10dp"
-                        android:background="@color/colorAccent"
-                        android:fontFamily="@font/centurygotic"
-                        android:text="Analisa sentimen mengenai MRT Jakarta berdasarkan komentar para pengguna sosial media Twitter."
-                        android:textColor="#007213"
-                        android:textSize="19dp"
-                        android:textStyle="italic" />
-
-                </RelativeLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-
-                    android:clipToPadding="false"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/grafik"
-                        android:layout_width="0dp"
-                        android:layout_height="140dp"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        app:cardBackgroundColor="@color/backgroundcolor"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="8dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:layout_marginTop="15dp"
-                                android:padding="0dp"
-                                android:src="@drawable/bar" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:text="CHART"
-                                android:fontFamily="@font/centurygotic"
-                                android:textColor="@color/hitam"
-                                android:textSize="20dp"
-                                android:textStyle="bold" />
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:layout_margin="10dp"
-                                android:background="@color/lightgrey" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/table"
-                        android:layout_width="0dp"
-                        android:layout_height="140dp"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        app:cardBackgroundColor="@color/backgroundcolor"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="8dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:layout_marginTop="15dp"
-                                android:padding="0dp"
-                                android:src="@drawable/haha" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/centurygotic"
-                                android:text="TWEETS"
-                                android:textColor="@color/hitam"
-                                android:textSize="20dp"
-                                android:textStyle="bold" />
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:layout_margin="10dp"
-                                android:background="@color/lightgrey" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:padding="5dp"
-                                android:text="untuk "
-                                android:textColor="@color/lightgrey" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center"
-                    android:clipToPadding="false"
-                    android:orientation="horizontal">
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/wordcloud"
-                        android:layout_width="0dp"
-                        android:layout_height="140dp"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        app:cardBackgroundColor="@color/backgroundcolor"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="8dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="90dp"
-                                android:layout_height="90dp"
-                                android:layout_marginTop="15dp"
-                                android:padding="0dp"
-                                android:src="@drawable/wordcloud2" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="10dp"
-                                android:fontFamily="@font/centurygotic"
-                                android:text="WORDCLOUD"
-                                android:textColor="@color/hitam"
-                                android:textSize="20dp"
-                                android:textStyle="bold" />
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:layout_margin="10dp"
-                                android:background="@color/lightgrey" />
-
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                    <androidx.cardview.widget.CardView
-                        android:id="@+id/about"
-                        android:layout_width="0dp"
-                        android:layout_height="140dp"
-                        android:layout_margin="10dp"
-                        android:layout_weight="1"
-                        android:clickable="true"
-                        app:cardBackgroundColor="@color/backgroundcolor"
-                        app:cardCornerRadius="8dp"
-                        app:cardElevation="8dp">
-
-                        <LinearLayout
-                            android:layout_width="match_parent"
-                            android:layout_height="match_parent"
-                            android:gravity="center"
-                            android:orientation="vertical">
-
-                            <ImageView
-                                android:layout_width="100dp"
-                                android:layout_height="100dp"
-                                android:layout_marginTop="10dp"
-                                android:padding="0dp"
-                                android:src="@drawable/about2" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:layout_marginTop="0dp"
-                                android:text="ABOUT"
-                                android:fontFamily="@font/centurygotic"
-                                android:textColor="@color/hitam"
-                                android:textSize="20dp"
-                                android:textStyle="bold" />
-
-                            <View
-                                android:layout_width="match_parent"
-                                android:layout_height="1dp"
-                                android:layout_margin="10dp"
-                                android:background="@color/lightgrey" />
-
-                            <TextView
-                                android:layout_width="wrap_content"
-                                android:layout_height="wrap_content"
-                                android:gravity="center"
-                                android:padding="5dp"
-                                android:text="sentimen"
-                                android:textColor="@color/lightgrey" />
-                        </LinearLayout>
-                    </androidx.cardview.widget.CardView>
-
-                </LinearLayout>
-
+                android:clipToPadding="false"
+                android:orientation="horizontal">
 
                 <androidx.cardview.widget.CardView
-                    android:id="@+id/exit"
-                    android:layout_width="match_parent"
+                    android:id="@+id/grafik"
+                    android:layout_width="0dp"
                     android:layout_height="140dp"
-                    android:layout_marginLeft="8dp"
-                    android:layout_marginRight="8dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
                     android:clickable="true"
                     app:cardBackgroundColor="@color/backgroundcolor"
                     app:cardCornerRadius="8dp"
@@ -308,35 +120,233 @@
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:gravity="center"
-
                         android:orientation="vertical">
 
                         <ImageView
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:layout_marginTop="15dp"
+                            android:layout_marginTop="10dp"
                             android:padding="0dp"
-                            android:src="@drawable/exit" />
+                            android:src="@drawable/logografik" />
 
                         <TextView
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="EXIT"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/centurygotic"
+                            android:text="CHART"
                             android:textColor="@color/hitam"
                             android:textSize="20dp"
-                            android:fontFamily="@font/centurygotic"
                             android:textStyle="bold" />
 
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/lightgrey" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/table"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardBackgroundColor="@color/backgroundcolor"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="0dp"
+                            android:src="@drawable/tweettosca" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/centurygotic"
+                            android:text="TWEETS"
+                            android:textColor="@color/hitam"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/lightgrey" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="untuk "
+                            android:textColor="@color/lightgrey" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:clipToPadding="false"
+                android:orientation="horizontal">
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/wordcloud"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardBackgroundColor="@color/backgroundcolor"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="0dp"
+                            android:src="@drawable/logowc" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/centurygotic"
+                            android:text="WORDCLOUD"
+                            android:textColor="@color/hitam"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/lightgrey" />
 
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="20dp"/>
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/about"
+                    android:layout_width="0dp"
+                    android:layout_height="140dp"
+                    android:layout_margin="10dp"
+                    android:layout_weight="1"
+                    android:clickable="true"
+                    app:cardBackgroundColor="@color/backgroundcolor"
+                    app:cardCornerRadius="8dp"
+                    app:cardElevation="8dp">
 
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <ImageView
+                            android:layout_width="100dp"
+                            android:layout_height="100dp"
+                            android:layout_marginTop="10dp"
+                            android:padding="0dp"
+                            android:src="@drawable/logoinfo" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="0dp"
+                            android:fontFamily="@font/centurygotic"
+                            android:text="ABOUT"
+                            android:textColor="@color/hitam"
+                            android:textSize="20dp"
+                            android:textStyle="bold" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="1dp"
+                            android:layout_margin="10dp"
+                            android:background="@color/lightgrey" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:padding="5dp"
+                            android:text="sentimen"
+                            android:textColor="@color/lightgrey" />
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
 
             </LinearLayout>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/exit"
+                android:layout_width="match_parent"
+                android:layout_height="140dp"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="8dp"
+                android:clickable="true"
+                app:cardBackgroundColor="@color/backgroundcolor"
+                app:cardCornerRadius="8dp"
+                app:cardElevation="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:layout_marginTop="5dp"
+                        android:padding="0dp"
+                        android:src="@drawable/exitlogo" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/centurygotic"
+                        android:text="EXIT"
+                        android:textColor="@color/hitam"
+                        android:textSize="20dp"
+                        android:textStyle="bold" />
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="20dp" />
+
+
+        </LinearLayout>
 
 
 

@@ -14,9 +14,10 @@
         android:textSize="20sp"
         android:textAlignment="center"
         android:textColor="@color/colorAccent"
-        android:background="#204c9d"
+        android:background="#6da1af"
         android:padding="10dp"
         android:textStyle="bold"
+        android:fontFamily="@font/centurygotic"
         android:id="@+id/judultweet"
         android:text="10 RECENT TWEETS"/>
     <androidx.recyclerview.widget.RecyclerView
